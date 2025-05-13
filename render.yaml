@@ -1,12 +1,18 @@
 services:
   - type: web
-    name: revolt-cv
+    name: cv-formatter
     runtime: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn revolt_cv.wsgi:application
+    buildCommand: |
+      pip install -r requirements.txt
+      python manage.py collectstatic --noinput
+    startCommand: gunicorn revolt_cv.wsgi:application --bind 0.0.0.0:$PORT
     envVars:
       - key: DJANGO_SETTINGS_MODULE
         value: revolt_cv.settings
+      - key: PYTHON_VERSION
+        value: 3.11
+      - key: DEBUG
+        value: False
       - key: OPENROUTER_API_KEY
-        sync: false
-    autoDeploy: true
+        sync: false  
+    plan: free
