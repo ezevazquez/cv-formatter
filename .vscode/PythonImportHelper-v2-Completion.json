@@ -1,5 +1,123 @@
 [
     {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "OpenAI",
+        "importPath": "openai",
+        "description": "openai",
+        "isExtraImport": true,
+        "detail": "openai",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "LETTER",
+        "importPath": "reportlab.lib.pagesizes",
+        "description": "reportlab.lib.pagesizes",
+        "isExtraImport": true,
+        "detail": "reportlab.lib.pagesizes",
+        "documentation": {}
+    },
+    {
+        "label": "SimpleDocTemplate",
+        "importPath": "reportlab.platypus",
+        "description": "reportlab.platypus",
+        "isExtraImport": true,
+        "detail": "reportlab.platypus",
+        "documentation": {}
+    },
+    {
+        "label": "Paragraph",
+        "importPath": "reportlab.platypus",
+        "description": "reportlab.platypus",
+        "isExtraImport": true,
+        "detail": "reportlab.platypus",
+        "documentation": {}
+    },
+    {
+        "label": "Spacer",
+        "importPath": "reportlab.platypus",
+        "description": "reportlab.platypus",
+        "isExtraImport": true,
+        "detail": "reportlab.platypus",
+        "documentation": {}
+    },
+    {
+        "label": "getSampleStyleSheet",
+        "importPath": "reportlab.lib.styles",
+        "description": "reportlab.lib.styles",
+        "isExtraImport": true,
+        "detail": "reportlab.lib.styles",
+        "documentation": {}
+    },
+    {
+        "label": "tempfile",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tempfile",
+        "description": "tempfile",
+        "detail": "tempfile",
+        "documentation": {}
+    },
+    {
+        "label": "fitz",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "fitz",
+        "description": "fitz",
+        "detail": "fitz",
+        "documentation": {}
+    },
+    {
+        "label": "pytesseract",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pytesseract",
+        "description": "pytesseract",
+        "detail": "pytesseract",
+        "documentation": {}
+    },
+    {
+        "label": "convert_from_bytes",
+        "importPath": "pdf2image",
+        "description": "pdf2image",
+        "isExtraImport": true,
+        "detail": "pdf2image",
+        "documentation": {}
+    },
+    {
         "label": "admin",
         "importPath": "django.contrib",
         "description": "django.contrib",
@@ -56,12 +174,12 @@
         "documentation": {}
     },
     {
-        "label": "os",
+        "label": "base64",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "os",
-        "description": "os",
-        "detail": "os",
+        "importPath": "base64",
+        "description": "base64",
+        "detail": "base64",
         "documentation": {}
     },
     {
@@ -114,6 +232,51 @@
         "documentation": {}
     },
     {
+        "label": "clean_json_block",
+        "kind": 2,
+        "importPath": "cvapp.utils.openai_client",
+        "description": "cvapp.utils.openai_client",
+        "peekOfCode": "def clean_json_block(raw):\n    \"\"\"\n    Elimina los bloques tipo ```json ... ``` y deja solo el JSON.\n    \"\"\"\n    cleaned = re.sub(r\"^```json\", \"\", raw.strip())\n    cleaned = re.sub(r\"```$\", \"\", cleaned.strip())\n    return cleaned.strip()\ndef structure_cv(raw_text):\n    try:\n        completion = client.chat.completions.create(",
+        "detail": "cvapp.utils.openai_client",
+        "documentation": {}
+    },
+    {
+        "label": "structure_cv",
+        "kind": 2,
+        "importPath": "cvapp.utils.openai_client",
+        "description": "cvapp.utils.openai_client",
+        "peekOfCode": "def structure_cv(raw_text):\n    try:\n        completion = client.chat.completions.create(\n            extra_headers={\n                \"HTTP-Referer\": \"http://localhost:8000\",\n                \"X-Title\": \"Revolt CV App\",\n            },\n            model=\"openai/gpt-4o\",\n            max_tokens=1000,\n            messages=[",
+        "detail": "cvapp.utils.openai_client",
+        "documentation": {}
+    },
+    {
+        "label": "client",
+        "kind": 5,
+        "importPath": "cvapp.utils.openai_client",
+        "description": "cvapp.utils.openai_client",
+        "peekOfCode": "client = OpenAI(\n    base_url=\"https://openrouter.ai/api/v1\",\n    api_key=os.getenv(\"OPENROUTER_API_KEY\")\n)\ndef clean_json_block(raw):\n    \"\"\"\n    Elimina los bloques tipo ```json ... ``` y deja solo el JSON.\n    \"\"\"\n    cleaned = re.sub(r\"^```json\", \"\", raw.strip())\n    cleaned = re.sub(r\"```$\", \"\", cleaned.strip())",
+        "detail": "cvapp.utils.openai_client",
+        "documentation": {}
+    },
+    {
+        "label": "generate_pdf",
+        "kind": 2,
+        "importPath": "cvapp.utils.pdf_generator",
+        "description": "cvapp.utils.pdf_generator",
+        "peekOfCode": "def generate_pdf(data):\n    temp_file = tempfile.NamedTemporaryFile(delete=False, suffix=\".pdf\")\n    doc = SimpleDocTemplate(temp_file.name, pagesize=LETTER)\n    styles = getSampleStyleSheet()\n    elements = []\n    # Section helper\n    def add_section(title, items):\n        elements.append(Spacer(1, 12))\n        elements.append(Paragraph(f\"<b>{title}</b>\", styles['Heading2']))\n        elements.append(Spacer(1, 6))",
+        "detail": "cvapp.utils.pdf_generator",
+        "documentation": {}
+    },
+    {
+        "label": "extract_text_from_pdf",
+        "kind": 2,
+        "importPath": "cvapp.utils.pdf_parser",
+        "description": "cvapp.utils.pdf_parser",
+        "peekOfCode": "def extract_text_from_pdf(file):\n    try:\n        # Primero intentamos extraer texto directamente con PyMuPDF\n        doc = fitz.open(stream=file.read(), filetype=\"pdf\")\n        text = \"\"\n        for page in doc:\n            text += page.get_text()\n        doc.close()\n        if text.strip():\n            return text",
+        "detail": "cvapp.utils.pdf_parser",
+        "documentation": {}
+    },
+    {
         "label": "CvappConfig",
         "kind": 6,
         "importPath": "cvapp.apps",
@@ -136,7 +299,7 @@
         "kind": 2,
         "importPath": "cvapp.views",
         "description": "cvapp.views",
-        "peekOfCode": "def upload_cv(request):\n    if request.method == 'POST':\n        form = CVUploadForm(request.POST, request.FILES)\n        if form.is_valid():\n            archivo = form.cleaned_data['file']\n            # Por ahora solo mostramos el nombre del archivo subido\n            return render(request, 'cvapp/result.html', {'archivo_nombre': archivo.name})\n    else:\n        form = CVUploadForm()\n    return render(request, 'cvapp/upload.html', {'form': form})",
+        "peekOfCode": "def upload_cv(request):\n    if request.method == 'POST':\n        form = CVUploadForm(request.POST, request.FILES)\n        if form.is_valid():\n            archivo = form.cleaned_data['file']\n            texto = pdf_parser.extract_text_from_pdf(archivo)\n            datos_estructurados = openai_client.structure_cv(texto)\n            ruta_pdf = pdf_generator.generate_pdf(datos_estructurados)\n            with open(ruta_pdf, 'rb') as f:\n                pdf_base64 = base64.b64encode(f.read()).decode('utf-8')",
         "detail": "cvapp.views",
         "documentation": {}
     },
