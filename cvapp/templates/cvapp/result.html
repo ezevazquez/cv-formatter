@@ -2,48 +2,80 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Resultado del CV</title>
+  <title>CV Result</title>
   <style>
     body {
-        font-family: Arial, sans-serif;
-        margin: 2rem;
-        background-color: #fff;
-        color: #333;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f6f9;
+      color: #333;
+      margin: 0;
+      padding: 2rem;
     }
-    h2, h3 {
-        color: #0055aa;
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
     }
-    pre {
-        background-color: #f5f5f5;
-        padding: 16px;
-        border: 1px solid #ccc;
-        font-size: 0.9em;
-        white-space: pre-wrap;
-        word-wrap: break-word;
-        overflow-x: auto;
+    h1, h2, h3 {
+      color: #1f2937;
     }
-    a {
-        display: inline-block;
-        margin-top: 10px;
-        padding: 10px 14px;
-        background-color: #0077cc;
-        color: white;
-        text-decoration: none;
-        border-radius: 5px;
+    h1 {
+      margin-bottom: 1rem;
+      font-size: 2rem;
+      text-align: center;
     }
-    a:hover {
-        background-color: #005fa3;
+    h2 {
+      font-size: 1.3rem;
+      margin-top: 2rem;
+      color: #2563eb;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.2rem;
+      background-color: #2563eb;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+    .btn:hover {
+      background-color: #1e40af;
+    }
+    iframe {
+      margin-top: 1.5rem;
+      width: 100%;
+      height: 600px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    .back-link {
+      margin-top: 2rem;
+      display: inline-block;
+      color: #2563eb;
+      text-decoration: none;
+    }
+    .back-link:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
 
-  <h2>✅ CV procesado</h2>
+  <div class="container">
+    <h1>✅ CV Processed Successfully</h1>
 
-  <h3>📄 Descargar PDF</h3>
-  <a href="data:application/pdf;base64,{{ pdf_base64 }}" download="cv_generado.pdf">Descargar PDF</a>
+    <h2>📄 Download PDF</h2>
+    <a class="btn" href="data:application/pdf;base64,{{ pdf_base64 }}" download="cv_generated.pdf">Download CV</a>
 
-  <hr>
+    <h2>📘 Preview</h2>
+    <iframe src="data:application/pdf;base64,{{ pdf_base64 }}"></iframe>
+
+    <a class="back-link" href="/">← Upload another CV</a>
+  </div>
 
 </body>
 </html>

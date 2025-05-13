@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: revolt-cv
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn revolt_cv.wsgi:application
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: revolt_cv.settings
+      - key: OPENROUTER_API_KEY
+        sync: false
+    autoDeploy: true
