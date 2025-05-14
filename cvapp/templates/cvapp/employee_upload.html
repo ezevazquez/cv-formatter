@@ -1,10 +1,9 @@
 {% extends 'cvapp/base.html' %}
-
 {% block content %}
-  <h2>Upload CV (Generic)</h2>
+  <h2>Upload CV for {{ employee.name }}</h2>
   <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit" class="button">Upload</button>
+    <button type="submit">Upload</button>
   </form>
 {% endblock %}

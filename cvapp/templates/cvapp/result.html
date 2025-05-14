@@ -1,81 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>CV Result</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #f4f6f9;
-      color: #333;
-      margin: 0;
-      padding: 2rem;
-    }
-    .container {
-      max-width: 900px;
-      margin: auto;
-      background: #fff;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
-    }
-    h1, h2, h3 {
-      color: #1f2937;
-    }
-    h1 {
-      margin-bottom: 1rem;
-      font-size: 2rem;
-      text-align: center;
-    }
-    h2 {
-      font-size: 1.3rem;
-      margin-top: 2rem;
-      color: #2563eb;
-    }
-    .btn {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.75rem 1.2rem;
-      background-color: #2563eb;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-    }
-    .btn:hover {
-      background-color: #1e40af;
-    }
-    iframe {
-      margin-top: 1.5rem;
-      width: 100%;
-      height: 600px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-    }
-    .back-link {
-      margin-top: 2rem;
-      display: inline-block;
-      color: #2563eb;
-      text-decoration: none;
-    }
-    .back-link:hover {
-      text-decoration: underline;
-    }
-  </style>
-</head>
-<body>
+{% extends 'cvapp/base.html' %}
 
-  <div class="container">
-    <h1>✅ CV Processed Successfully</h1>
+{% block content %}
+  <h2>✅ CV Processed</h2>
+  <a href="data:application/pdf;base64,{{ pdf_base64 }}" download="cv.pdf" class="button">Download PDF</a>
 
-    <h2>📄 Download PDF</h2>
-    <a class="btn" href="data:application/pdf;base64,{{ pdf_base64 }}" download="cv_generated.pdf">Download CV</a>
-
-    <h2>📘 Preview</h2>
-    <iframe src="data:application/pdf;base64,{{ pdf_base64 }}"></iframe>
-
-    <a class="back-link" href="/">← Upload another CV</a>
-  </div>
-
-</body>
-</html>
+  <h3 style="margin-top: 2rem;">Preview</h3>
+  <iframe src="data:application/pdf;base64,{{ pdf_base64 }}" width="100%" height="600px"></iframe>
+{% endblock %}

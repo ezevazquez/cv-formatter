@@ -1,5 +1,45 @@
 [
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "os",
         "kind": 6,
         "isExtraImport": true,
@@ -150,14 +190,6 @@
         "documentation": {}
     },
     {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
         "label": "TestCase",
         "importPath": "django.test",
         "description": "django.test",
@@ -166,11 +198,75 @@
         "documentation": {}
     },
     {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
         "label": "render",
         "importPath": "django.shortcuts",
         "description": "django.shortcuts",
         "isExtraImport": true,
         "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "get_object_or_404",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "ContentFile",
+        "importPath": "django.core.files.base",
+        "description": "django.core.files.base",
+        "isExtraImport": true,
+        "detail": "django.core.files.base",
         "documentation": {}
     },
     {
@@ -199,19 +295,19 @@
         "documentation": {}
     },
     {
-        "label": "path",
-        "importPath": "django.urls",
-        "description": "django.urls",
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
         "isExtraImport": true,
-        "detail": "django.urls",
+        "detail": "django.conf",
         "documentation": {}
     },
     {
-        "label": "upload_cv",
-        "importPath": "cvapp.views",
-        "description": "cvapp.views",
+        "label": "static",
+        "importPath": "django.conf.urls.static",
+        "description": "django.conf.urls.static",
         "isExtraImport": true,
-        "detail": "cvapp.views",
+        "detail": "django.conf.urls.static",
         "documentation": {}
     },
     {
@@ -229,6 +325,24 @@
         "importPath": "sys",
         "description": "sys",
         "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "cvapp.migrations.0001_initial",
+        "description": "cvapp.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Employee',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('name', models.CharField(max_length=255)),",
+        "detail": "cvapp.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "cvapp.migrations.0002_employee_email",
+        "description": "cvapp.migrations.0002_employee_email",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('cvapp', '0001_initial'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='employee',\n            name='email',\n            field=models.EmailField(blank=True, max_length=254, null=True),\n        ),",
+        "detail": "cvapp.migrations.0002_employee_email",
         "documentation": {}
     },
     {
@@ -277,6 +391,15 @@
         "documentation": {}
     },
     {
+        "label": "EmployeeAdmin",
+        "kind": 6,
+        "importPath": "cvapp.admin",
+        "description": "cvapp.admin",
+        "peekOfCode": "class EmployeeAdmin(admin.ModelAdmin):\n    list_display = ('name', 'last_updated')\n    readonly_fields = ('last_updated',)",
+        "detail": "cvapp.admin",
+        "documentation": {}
+    },
+    {
         "label": "CvappConfig",
         "kind": 6,
         "importPath": "cvapp.apps",
@@ -290,8 +413,53 @@
         "kind": 6,
         "importPath": "cvapp.forms",
         "description": "cvapp.forms",
-        "peekOfCode": "class CVUploadForm(forms.Form):\n    file = forms.FileField(label=\"Subí tu CV (PDF)\", required=True)",
+        "peekOfCode": "class CVUploadForm(forms.Form):\n    file = forms.FileField(label=\"Subí tu CV (PDF)\", required=True)\nclass EmployeeForm(forms.ModelForm):\n    class Meta:\n        model = Employee\n        fields = ['name']\nclass CVUploadForm(forms.ModelForm):\n    class Meta:\n        model = Employee\n        fields = ['uploaded_cv']",
         "detail": "cvapp.forms",
+        "documentation": {}
+    },
+    {
+        "label": "EmployeeForm",
+        "kind": 6,
+        "importPath": "cvapp.forms",
+        "description": "cvapp.forms",
+        "peekOfCode": "class EmployeeForm(forms.ModelForm):\n    class Meta:\n        model = Employee\n        fields = ['name']\nclass CVUploadForm(forms.ModelForm):\n    class Meta:\n        model = Employee\n        fields = ['uploaded_cv']\nclass EmployeeForm(forms.ModelForm):\n    class Meta:",
+        "detail": "cvapp.forms",
+        "documentation": {}
+    },
+    {
+        "label": "CVUploadForm",
+        "kind": 6,
+        "importPath": "cvapp.forms",
+        "description": "cvapp.forms",
+        "peekOfCode": "class CVUploadForm(forms.ModelForm):\n    class Meta:\n        model = Employee\n        fields = ['uploaded_cv']\nclass EmployeeForm(forms.ModelForm):\n    class Meta:\n        model = Employee\n        fields = ['name', 'email']",
+        "detail": "cvapp.forms",
+        "documentation": {}
+    },
+    {
+        "label": "EmployeeForm",
+        "kind": 6,
+        "importPath": "cvapp.forms",
+        "description": "cvapp.forms",
+        "peekOfCode": "class EmployeeForm(forms.ModelForm):\n    class Meta:\n        model = Employee\n        fields = ['name', 'email']",
+        "detail": "cvapp.forms",
+        "documentation": {}
+    },
+    {
+        "label": "Employee",
+        "kind": 6,
+        "importPath": "cvapp.models",
+        "description": "cvapp.models",
+        "peekOfCode": "class Employee(models.Model):\n    name = models.CharField(max_length=255)\n    email = models.EmailField(null=True, blank=True)\n    uploaded_cv = models.FileField(upload_to='uploads/', null=True, blank=True)\n    generated_pdf = models.FileField(upload_to='generated_pdfs/', null=True, blank=True)\n    last_updated = models.DateTimeField(auto_now=True)\n    description = models.TextField(blank=True)\n    stack = models.JSONField(default=list, blank=True)\n    experience = models.JSONField(default=list, blank=True)\n    education = models.JSONField(default=list, blank=True)",
+        "detail": "cvapp.models",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "cvapp.urls",
+        "description": "cvapp.urls",
+        "peekOfCode": "urlpatterns = [\n    path('', views.employee_list, name='employee_list'),\n    path('employee/<int:pk>/', views.employee_detail, name='employee_detail'),\n    path('employee/create/', views.employee_create, name='employee_create'),\n    path('employee/<int:pk>/upload/', views.upload_cv, name='employee_upload'),\n]",
+        "detail": "cvapp.urls",
         "documentation": {}
     },
     {
@@ -300,6 +468,42 @@
         "importPath": "cvapp.views",
         "description": "cvapp.views",
         "peekOfCode": "def upload_cv(request):\n    if request.method == 'POST':\n        form = CVUploadForm(request.POST, request.FILES)\n        if form.is_valid():\n            archivo = form.cleaned_data['file']\n            texto = pdf_parser.extract_text_from_pdf(archivo)\n            datos_estructurados = openai_client.structure_cv(texto)\n            ruta_pdf = pdf_generator.generate_pdf(datos_estructurados)\n            with open(ruta_pdf, 'rb') as f:\n                pdf_base64 = base64.b64encode(f.read()).decode('utf-8')",
+        "detail": "cvapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "employee_list",
+        "kind": 2,
+        "importPath": "cvapp.views",
+        "description": "cvapp.views",
+        "peekOfCode": "def employee_list(request):\n    employees = Employee.objects.all().order_by('-last_updated')\n    return render(request, 'cvapp/employee_list.html', {'employees': employees})\ndef employee_detail(request, pk):\n    employee = get_object_or_404(Employee, pk=pk)\n    return render(request, 'cvapp/employee_detail.html', {'employee': employee})\ndef upload_cv(request, pk):\n    employee = get_object_or_404(Employee, pk=pk)\n    if request.method == 'POST':\n        form = CVUploadForm(request.POST, request.FILES, instance=employee)",
+        "detail": "cvapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "employee_detail",
+        "kind": 2,
+        "importPath": "cvapp.views",
+        "description": "cvapp.views",
+        "peekOfCode": "def employee_detail(request, pk):\n    employee = get_object_or_404(Employee, pk=pk)\n    return render(request, 'cvapp/employee_detail.html', {'employee': employee})\ndef upload_cv(request, pk):\n    employee = get_object_or_404(Employee, pk=pk)\n    if request.method == 'POST':\n        form = CVUploadForm(request.POST, request.FILES, instance=employee)\n        if form.is_valid():\n            form.save()\n            text = pdf_parser.extract_text_from_pdf(employee.uploaded_cv)",
+        "detail": "cvapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "upload_cv",
+        "kind": 2,
+        "importPath": "cvapp.views",
+        "description": "cvapp.views",
+        "peekOfCode": "def upload_cv(request, pk):\n    employee = get_object_or_404(Employee, pk=pk)\n    if request.method == 'POST':\n        form = CVUploadForm(request.POST, request.FILES, instance=employee)\n        if form.is_valid():\n            form.save()\n            text = pdf_parser.extract_text_from_pdf(employee.uploaded_cv)\n            structured = openai_client.structure_cv(text)\n            employee.description = structured.get('description', '')\n            employee.stack = structured.get('stack', [])",
+        "detail": "cvapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "employee_create",
+        "kind": 2,
+        "importPath": "cvapp.views",
+        "description": "cvapp.views",
+        "peekOfCode": "def employee_create(request):\n    if request.method == 'POST':\n        form = EmployeeForm(request.POST)\n        if form.is_valid():\n            employee = form.save()\n            return redirect('employee_detail', pk=employee.pk)\n    else:\n        form = EmployeeForm()\n    return render(request, 'cvapp/employee_create.html', {'form': form})",
         "detail": "cvapp.views",
         "documentation": {}
     },
@@ -317,7 +521,7 @@
         "kind": 5,
         "importPath": "revolt_cv.settings",
         "description": "revolt_cv.settings",
-        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = 'django-insecure-)i$gv&=kd^6*uqp61nou2m&c_anzztw7+(l5q_6uh*2kjqqo+%'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = False\nALLOWED_HOSTS = ['cv-formatter.onrender.com', '127.0.0.1', 'localhost']\n# Application definition\nINSTALLED_APPS = [",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = 'django-insecure-)i$gv&=kd^6*uqp61nou2m&c_anzztw7+(l5q_6uh*2kjqqo+%'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = ['cv-formatter.onrender.com', '127.0.0.1', 'localhost']\n# Application definition\nINSTALLED_APPS = [",
         "detail": "revolt_cv.settings",
         "documentation": {}
     },
@@ -326,7 +530,7 @@
         "kind": 5,
         "importPath": "revolt_cv.settings",
         "description": "revolt_cv.settings",
-        "peekOfCode": "SECRET_KEY = 'django-insecure-)i$gv&=kd^6*uqp61nou2m&c_anzztw7+(l5q_6uh*2kjqqo+%'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = False\nALLOWED_HOSTS = ['cv-formatter.onrender.com', '127.0.0.1', 'localhost']\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "peekOfCode": "SECRET_KEY = 'django-insecure-)i$gv&=kd^6*uqp61nou2m&c_anzztw7+(l5q_6uh*2kjqqo+%'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = ['cv-formatter.onrender.com', '127.0.0.1', 'localhost']\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
         "detail": "revolt_cv.settings",
         "documentation": {}
     },
@@ -335,7 +539,7 @@
         "kind": 5,
         "importPath": "revolt_cv.settings",
         "description": "revolt_cv.settings",
-        "peekOfCode": "DEBUG = False\nALLOWED_HOSTS = ['cv-formatter.onrender.com', '127.0.0.1', 'localhost']\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = ['cv-formatter.onrender.com', '127.0.0.1', 'localhost']\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
         "detail": "revolt_cv.settings",
         "documentation": {}
     },
@@ -443,7 +647,7 @@
         "kind": 5,
         "importPath": "revolt_cv.settings",
         "description": "revolt_cv.settings",
-        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.2/howto/static-files/\nSTATIC_URL = '/static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nSTATIC_ROOT = BASE_DIR / 'staticfiles'\nSTATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.2/howto/static-files/\nSTATIC_URL = '/static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nSTATIC_ROOT = BASE_DIR / 'staticfiles'\nSTATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'\nMEDIA_URL = '/media/'",
         "detail": "revolt_cv.settings",
         "documentation": {}
     },
@@ -452,7 +656,7 @@
         "kind": 5,
         "importPath": "revolt_cv.settings",
         "description": "revolt_cv.settings",
-        "peekOfCode": "STATIC_URL = '/static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nSTATIC_ROOT = BASE_DIR / 'staticfiles'\nSTATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'",
+        "peekOfCode": "STATIC_URL = '/static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nSTATIC_ROOT = BASE_DIR / 'staticfiles'\nSTATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'\nMEDIA_URL = '/media/'\nMEDIA_ROOT = BASE_DIR / 'media'",
         "detail": "revolt_cv.settings",
         "documentation": {}
     },
@@ -461,7 +665,7 @@
         "kind": 5,
         "importPath": "revolt_cv.settings",
         "description": "revolt_cv.settings",
-        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nSTATIC_ROOT = BASE_DIR / 'staticfiles'\nSTATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nSTATIC_ROOT = BASE_DIR / 'staticfiles'\nSTATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'\nMEDIA_URL = '/media/'\nMEDIA_ROOT = BASE_DIR / 'media'",
         "detail": "revolt_cv.settings",
         "documentation": {}
     },
@@ -470,7 +674,7 @@
         "kind": 5,
         "importPath": "revolt_cv.settings",
         "description": "revolt_cv.settings",
-        "peekOfCode": "STATIC_ROOT = BASE_DIR / 'staticfiles'\nSTATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'",
+        "peekOfCode": "STATIC_ROOT = BASE_DIR / 'staticfiles'\nSTATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'\nMEDIA_URL = '/media/'\nMEDIA_ROOT = BASE_DIR / 'media'",
         "detail": "revolt_cv.settings",
         "documentation": {}
     },
@@ -479,7 +683,25 @@
         "kind": 5,
         "importPath": "revolt_cv.settings",
         "description": "revolt_cv.settings",
-        "peekOfCode": "STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'",
+        "peekOfCode": "STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'\nMEDIA_URL = '/media/'\nMEDIA_ROOT = BASE_DIR / 'media'",
+        "detail": "revolt_cv.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_URL",
+        "kind": 5,
+        "importPath": "revolt_cv.settings",
+        "description": "revolt_cv.settings",
+        "peekOfCode": "MEDIA_URL = '/media/'\nMEDIA_ROOT = BASE_DIR / 'media'",
+        "detail": "revolt_cv.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_ROOT",
+        "kind": 5,
+        "importPath": "revolt_cv.settings",
+        "description": "revolt_cv.settings",
+        "peekOfCode": "MEDIA_ROOT = BASE_DIR / 'media'",
         "detail": "revolt_cv.settings",
         "documentation": {}
     },
@@ -488,7 +710,7 @@
         "kind": 5,
         "importPath": "revolt_cv.urls",
         "description": "revolt_cv.urls",
-        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', upload_cv, name='upload_cv'),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', include('cvapp.urls')),\n] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
         "detail": "revolt_cv.urls",
         "documentation": {}
     },

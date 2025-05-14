@@ -1,0 +1,36 @@
+{% extends 'cvapp/base.html' %}
+{% block content %}
+  <h2>{{ employee.name }}</h2>
+  <p><strong>Email:</strong> {{ employee.email }}</p>
+  <p><strong>Last Updated:</strong> {{ employee.last_updated }}</p>
+
+  {% if employee.generated_pdf %}
+    <a href="{{ employee.generated_pdf.url }}" download>📄 Download Processed CV</a>
+  {% endif %}
+
+  {% if employee.uploaded_cv %}
+    <p>Original file: {{ employee.uploaded_cv.name }}</p>
+  {% endif %}
+
+  <h3>Experience</h3>
+  <ul>
+    {% for item in employee.experience %}
+      <li>{{ item }}</li>
+    {% endfor %}
+  </ul>
+
+  <h3>Stack</h3>
+  <ul>
+    {% for tech in employee.stack %}
+      <li>{{ tech }}</li>
+    {% endfor %}
+  </ul>
+
+  <h3>Education</h3>
+  <ul>
+    {% for edu in employee.education %}
+      <li>{{ edu }}</li>
+    {% endfor %}
+  </ul>
+
+{% endblock %}

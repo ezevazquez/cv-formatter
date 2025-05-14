@@ -1,0 +1,30 @@
+{% extends 'cvapp/base.html' %} {% block content %}
+<h2>Employee Directory</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>CV Status</th>
+      <th>Last Updated</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for employee in employees %}
+    <tr>
+      <td>{{ employee.name }}</td>
+      <td>{{ employee.cv.name|default:"No file" }}</td>
+      <td>{{ employee.updated_at|date:"Y-m-d H:i" }}</td>
+      <td>
+        <a href="{% url 'employee_detail' employee.id %}">View</a>
+        <a href="{% url 'employee_upload' employee.id %}">Upload CV</a>
+      </td>
+    </tr>
+    {% empty %}
+    <tr>
+      <td colspan="4">No employees found.</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
