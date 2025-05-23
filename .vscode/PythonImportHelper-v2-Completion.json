@@ -431,7 +431,7 @@
         "kind": 6,
         "importPath": "cvapp.forms",
         "description": "cvapp.forms",
-        "peekOfCode": "class CVUploadForm(forms.ModelForm):\n    class Meta:\n        model = Employee\n        fields = ['uploaded_cv']\nclass EmployeeForm(forms.ModelForm):\n    class Meta:\n        model = Employee\n        fields = ['name', 'email']",
+        "peekOfCode": "class CVUploadForm(forms.ModelForm):\n    class Meta:\n        model = Employee\n        fields = ['uploaded_cv']\nclass EmployeeForm(forms.ModelForm):\n    class Meta:\n        model = Employee\n        fields = ['name', 'email']\nclass CVUploadForm(forms.ModelForm):\n    class Meta:",
         "detail": "cvapp.forms",
         "documentation": {}
     },
@@ -440,7 +440,34 @@
         "kind": 6,
         "importPath": "cvapp.forms",
         "description": "cvapp.forms",
-        "peekOfCode": "class EmployeeForm(forms.ModelForm):\n    class Meta:\n        model = Employee\n        fields = ['name', 'email']",
+        "peekOfCode": "class EmployeeForm(forms.ModelForm):\n    class Meta:\n        model = Employee\n        fields = ['name', 'email']\nclass CVUploadForm(forms.ModelForm):\n    class Meta:\n        model = Employee\n        fields = ['uploaded_cv']\nclass CVUploadForm(forms.ModelForm):\n    class Meta:",
+        "detail": "cvapp.forms",
+        "documentation": {}
+    },
+    {
+        "label": "CVUploadForm",
+        "kind": 6,
+        "importPath": "cvapp.forms",
+        "description": "cvapp.forms",
+        "peekOfCode": "class CVUploadForm(forms.ModelForm):\n    class Meta:\n        model = Employee\n        fields = ['uploaded_cv']\nclass CVUploadForm(forms.ModelForm):\n    class Meta:\n        model = Employee\n        fields = ['uploaded_cv']\nclass CVUploadForm(forms.ModelForm):\n    class Meta:",
+        "detail": "cvapp.forms",
+        "documentation": {}
+    },
+    {
+        "label": "CVUploadForm",
+        "kind": 6,
+        "importPath": "cvapp.forms",
+        "description": "cvapp.forms",
+        "peekOfCode": "class CVUploadForm(forms.ModelForm):\n    class Meta:\n        model = Employee\n        fields = ['uploaded_cv']\nclass CVUploadForm(forms.ModelForm):\n    class Meta:\n        model = Employee\n        fields = ['uploaded_cv']",
+        "detail": "cvapp.forms",
+        "documentation": {}
+    },
+    {
+        "label": "CVUploadForm",
+        "kind": 6,
+        "importPath": "cvapp.forms",
+        "description": "cvapp.forms",
+        "peekOfCode": "class CVUploadForm(forms.ModelForm):\n    class Meta:\n        model = Employee\n        fields = ['uploaded_cv']",
         "detail": "cvapp.forms",
         "documentation": {}
     },
