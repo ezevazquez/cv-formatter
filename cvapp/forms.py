@@ -19,18 +19,3 @@ class EmployeeForm(forms.ModelForm):
     class Meta:
         model = Employee
         fields = ['name', 'email']
-
-class CVUploadForm(forms.ModelForm):
-    class Meta:
-        model = Employee
-        fields = ['uploaded_cv']
-
-class CVUploadForm(forms.ModelForm):
-    class Meta:
-        model = Employee
-        fields = ['uploaded_cv']
-
-class CVUploadForm(forms.ModelForm):
-    class Meta:
-        model = Employee
-        fields = ['uploaded_cv']
